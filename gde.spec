@@ -5,9 +5,6 @@ Version:	0.1.9
 Release:	2
 License:	GPL
 Group:		X11/Development/Tools
-Group(de):	X11/Entwicklung/Werkzeuge
-Group(fr):	X11/Development/Outils
-Group(pl):	X11/Programowanie/Narzêdzia
 Source0:	http://www.student.tue.nl/u/g.zwartjes/download/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 URL:		http://www.student.tue.nl/u/g.zwartjes/gde.html
