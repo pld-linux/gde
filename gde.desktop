@@ -6,5 +6,5 @@ Exec=gde
 Terminal=false
 Type=Application
 Encoding=UTF-8
-Categories=Development;
+Categories=GTK;Development;
 # vi: encoding=utf-8
