@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-%{__install} -D %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
+%{__install} -D %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development/gde.desktop
 
 gzip -9nf README TODO ChangeLog NEWS AUTHORS doc/Manual
  
