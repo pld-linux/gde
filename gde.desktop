@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Gde
 Comment=GDE - Gtk Development Environment
+Comment[pl]=GDE - środowisko programistyczne Gtk
 Exec=gde
 Terminal=0
 Type=Application
