@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Gde
+Comment=GDE - Gtk Development Environment
+Exec=gde
+Terminal=0
+Type=Application
