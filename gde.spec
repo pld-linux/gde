@@ -1,4 +1,5 @@
 Summary:	Tool to manage programming projects
+Summary(pl):	Narzêdzie do zarz±dzania projektami programistycznymi
 Name:		gde
 Version:	0.1.9
 Release:	1
@@ -26,6 +27,16 @@ a tool to manage programming projects. It keeps the user from
 switching between terminals and editor windows, with a project
 explorer. Making and running a project can be done with function keys,
 with commands the user defines.
+
+%description -l pl
+GTK Development Environment (GDE) zapewnia ci podczas programowania
+odpowiedni szkielet projektu. Nie jest zintegrowanym ¶rodowiskiem
+programistycznym (IDE), lecz narzêdziem do zarz±dzania projektami
+programistycznymi. Przy pomocy przegl±darki projektu uwalnia
+u¿ytkownika od konieczno¶ci prze³±czania siê pomiêdzy terminalami i
+oknami edytora. Kompilacja i uruchomienie projektu mo¿e byæ wywo³ane
+przez klawisze funkcyjne, przy pomocy komend podanych przez
+u¿ytkownika.
 
 %prep
 %setup -q 
