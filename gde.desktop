@@ -4,3 +4,4 @@ Comment=GDE - Gtk Development Environment
 Exec=gde
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
