@@ -54,13 +54,11 @@ rm -rf $RPM_BUILD_ROOT
 
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development/gde.desktop
 
-gzip -9nf README TODO ChangeLog NEWS AUTHORS doc/Manual
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz doc/*.gz
+%doc README TODO ChangeLog NEWS AUTHORS doc/Manual
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Development/*
