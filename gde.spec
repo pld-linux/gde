@@ -2,7 +2,7 @@ Summary:	Tool to manage programming projects
 Summary(pl):	Narzêdzie do zarz±dzania projektami programistycznymi
 Name:		gde
 Version:	0.1.9
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://www.student.tue.nl/u/g.zwartjes/ews/download/%{name}-%{version}.tar.gz
