@@ -36,7 +36,7 @@ przez klawisze funkcyjne, przy pomocy komend podanych przez
 u¿ytkownika.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 rm -f missing
@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__install} -D %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development/gde.desktop
 
 gzip -9nf README TODO ChangeLog NEWS AUTHORS doc/Manual
- 
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
