@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://www.student.tue.nl/u/g.zwartjes/download/%{name}-%{version}.tar.gz
+# Source0-md5:	88a4dffbe2e737e94d9f3d3a8cbcac54
 Source1:	%{name}.desktop
 URL:		http://www.student.tue.nl/u/g.zwartjes/gde.html
 BuildRequires:	autoconf
