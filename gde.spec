@@ -2,7 +2,7 @@ Summary:	Tool to manage programming projects
 Summary(pl):	Narzêdzie do zarz±dzania projektami programistycznymi
 Name:		gde
 Version:	0.1.9
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://www.student.tue.nl/u/g.zwartjes/ews/download/%{name}-%{version}.tar.gz
@@ -51,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install -D %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development/gde.desktop
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/gde.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,4 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO ChangeLog NEWS AUTHORS doc/Manual
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Development/*
+%{_desktopdir}/*
