@@ -2,7 +2,7 @@ Summary:	Tool to manage programming projects
 Summary(pl):	Narzêdzie do zarz±dzania projektami programistycznymi
 Name:		gde
 Version:	0.1.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Development/Tools
 Group(de):	X11/Entwicklung/Werkzeuge
@@ -66,4 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz doc/*.gz
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Development
+%{_applnkdir}/Development/*
