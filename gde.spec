@@ -25,20 +25,18 @@ explorer. Making and running a project can be done with function keys,
 with commands the user defines.
 
 %description -l pl
-GTK+ Development Environment (GDE) zapewnia ci podczas programowania
-odpowiedni szkielet projektu. Nie jest zintegrowanym ¶rodowiskiem
-programistycznym (IDE), lecz narzêdziem do zarz±dzania projektami
-programistycznymi. Przy pomocy przegl±darki projektu uwalnia
-u¿ytkownika od konieczno¶ci prze³±czania siê pomiêdzy terminalami i
-oknami edytora. Kompilacja i uruchomienie projektu mo¿e byæ wywo³ane
-przez klawisze funkcyjne, przy pomocy komend podanych przez
-u¿ytkownika.
+GTK+ Development Environment (GDE) s³u¿y jako szkielet projektu przy
+programowaniu. Nie jest zintegrowanym ¶rodowiskiem programistycznym
+(IDE), lecz narzêdziem do zarz±dzania projektami programistycznymi.
+Przy pomocy przegl±darki projektu uwalnia u¿ytkownika od konieczno¶ci
+prze³±czania siê pomiêdzy terminalami i oknami edytora. Kompilacja i
+uruchomienie projektu mo¿e byæ wywo³ane przez klawisze funkcyjne, przy
+pomocy komend podanych przez u¿ytkownika.
 
 %prep
 %setup -q
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -49,7 +47,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/gde.desktop
 
