@@ -1,72 +1,58 @@
-%define name gde
-%define version 0.1.9
-%define release 1mdk
+Summary:	Tool to manage programming projects
+Name:		gde
+Version:	0.1.9
+Release:	1
+License:	GPL
+Group:		X11/Development/Tools
+Group(de):	X11/Entwicklung/Werkzeuge
+Group(fr):	X11/Development/Outils
+Group(pl):	X11/Programowanie/Narzêdzia
+Source0:	http://www.student.tue.nl/u/g.zwartjes/download/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
+URL:		http://www.student.tue.nl/u/g.zwartjes/gde.html
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gtk+-devel
+BuildRequires:	libtool
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
-Version: %{version}
-Summary: Tool to manage programming projects
-Name: %{name}
-Release: %{release}
-Copyright: GPL
-Group: Development/Other
-Source: %{name}-%{version}.tar.bz2
-URL: http://www.student.tue.nl/u/g.zwartjes/
-BuildRoot: %{_tmppath}/%{name}-buildroot
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
-GTK Development Environment (GDE) acts as a framework when you are programming.
-It is not an integrated development environment, but more a tool to manage 
-programming projects. It keeps the user from switching between terminals and 
-editor windows, with a project explorer. Making and running a project can be 
-done with function keys, with commands the user defines.
+GTK Development Environment (GDE) acts as a framework when you are
+programming. It is not an integrated development environment, but more
+a tool to manage programming projects. It keeps the user from
+switching between terminals and editor windows, with a project
+explorer. Making and running a project can be done with function keys,
+with commands the user defines.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
-%setup 
+%setup -q 
 
 %build
-
+rm -f missing
+libtoolize --copy --force
+aclocal
+autoconf
+automake -a -c
 %configure
-
-%make
+%{__make}
 
 %install
+rm -rf $RPM_BUILD_ROOT
 
-%makeinstall
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-(cd $RPM_BUILD_ROOT
-mkdir -p ./usr/lib/menu
-cat > ./usr/lib/menu/%name <<EOF
-?package(%name):\
-command="/usr/bin/gde"\
-title="Gde"\
-longtitle="Programming framework"\
-needs="x11"\
-section="Applications/Development/Development environments"
-EOF
-)
+%{__install} -D %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
+
+gzip -9nf README TODO ChangeLog NEWS AUTHORS doc/Manual
  
-%post
-%update_menus
- 
-%postun
-%clean_menus 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr (-,root,root)
-%doc README COPYING INSTALL TODO ChangeLog NEWS AUTHORS 
-%doc doc/Manual
-%_bindir/*
-%_menudir/*
-
-%changelog
-* Thu Dec 07 2000 Lenny Cartier <lenny@mandrakesoft.com> 0.1.9-1mdk
-- updated to 0.1.9
-
-* Tue Nov 14 2000 Lenny Cartier <lenny@mandrakesoft.com> 0.1.7-1mdk
-- new in contribs
-- add menu entry
+%defattr(644,root,root,755)
+%doc *.gz doc/*.gz
+%attr(755,root,root) %{_bindir}/*
+%{_applnkdir}/Development
