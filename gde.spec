@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
 %description
-GTK Development Environment (GDE) acts as a framework when you are
+GTK+ Development Environment (GDE) acts as a framework when you are
 programming. It is not an integrated development environment, but more
 a tool to manage programming projects. It keeps the user from
 switching between terminals and editor windows, with a project
@@ -25,7 +25,7 @@ explorer. Making and running a project can be done with function keys,
 with commands the user defines.
 
 %description -l pl
-GTK Development Environment (GDE) zapewnia ci podczas programowania
+GTK+ Development Environment (GDE) zapewnia ci podczas programowania
 odpowiedni szkielet projektu. Nie jest zintegrowanym ¶rodowiskiem
 programistycznym (IDE), lecz narzêdziem do zarz±dzania projektami
 programistycznymi. Przy pomocy przegl±darki projektu uwalnia
