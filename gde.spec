@@ -5,10 +5,10 @@ Version:	0.1.9
 Release:	2
 License:	GPL
 Group:		X11/Development/Tools
-Source0:	http://www.student.tue.nl/u/g.zwartjes/download/%{name}-%{version}.tar.gz
-# Source0-md5:	88a4dffbe2e737e94d9f3d3a8cbcac54
+Source0:	http://www.student.tue.nl/u/g.zwartjes/ews/download/%{name}-%{version}.tar.gz
+# Source0-md5:	d2c3880cf2985196e52c5ac3b7f64a07
 Source1:	%{name}.desktop
-URL:		http://www.student.tue.nl/u/g.zwartjes/gde.html
+URL:		http://www.student.tue.nl/u/g.zwartjes/ews/gde.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
