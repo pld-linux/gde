@@ -59,4 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO ChangeLog NEWS AUTHORS doc/Manual
 %attr(755,root,root) %{_bindir}/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
