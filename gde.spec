@@ -1,5 +1,5 @@
 Summary:	Tool to manage programming projects
-Summary(pl.UTF-8):   Narzędzie do zarządzania projektami programistycznymi
+Summary(pl.UTF-8):	Narzędzie do zarządzania projektami programistycznymi
 Name:		gde
 Version:	0.1.9
 Release:	5
