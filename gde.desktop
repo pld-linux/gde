@@ -5,6 +5,5 @@ Comment[pl]=GDE - środowisko programistyczne Gtk
 Exec=gde
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=GTK;Development;
 # vi: encoding=utf-8
